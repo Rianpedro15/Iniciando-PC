@@ -1,0 +1,95 @@
+nome = input('Qual seu nome?\n')
+idade = input('Qual sua idade?\n')
+altura = input('Qual sua altura?\n')
+programador = input('Você é um programador ?\n 1 - SIM || 2 - NÃO\n')
+
+if programador == '1':
+
+    while True:
+        print(f'============= Bem-vindo á area de trabalho {nome} =============')
+        opcao = input('Qual aplicativo gostaria de acessar hoje?\n 1 - Calculadora\n 2 - Conversor de Temperatura\n 3 - Outros\n 4 - Deligar a Maquina\n')
+
+  #OS ELIF SIGNIFICA MAIS CONDIÇÕES#
+    
+        if opcao == '1':
+            print('============= CALCULADORA INICIANDO =============')
+            operacao = input('1 - Soma || 2 - Subtração || 3 - Multiplicação\n')
+ 
+            if operacao == '1': ##SOMA
+                num1 = int(input('Qual o 1° numero:'))
+                num2 = int(input('Qual o 2° número:'))
+                resultado = num1+num2
+                print(f'\nO resultado da sua operação é.............. {resultado}\n')
+
+            elif operacao == '2': ##SUBTRAÇÃO
+                num1 = int(input('Qual o 1° numero:'))
+                num2 = int(input('Qual o 2° número:'))
+                resultado = num1-num2
+                print(f'\nO resultado da sua operação é................ {resultado1}\n')
+
+            elif operacao == '3': ##MULTIPLICAÇÃO
+                num1 = int(input('Qual o 1° numero:'))
+                num2 = int(input('Qual o 2° número:'))
+                resultado = num1*num2
+                print(f'\nO resultado da sua operação é................ {resultado2}\n')
+
+            else:
+                print('Opção Invalida... BURRO')
+
+                ##SAINDO DA CALCULADORA##
+
+        elif opcao == '2':
+            print('============= CONVERSOR INICIANDO =============')
+            pergunta = input('Qual temperatura gostaria de converter\n 1 - Celsius\n 2 - Fahrenheit\n')
+
+            if pergunta == '1': ##DESCOBRIR C
+                temp = int(input('Temperatura: '))
+                celsius = (temp-32)/1.8
+                print(f'\n{temp}° fahrenheit em graus celsius é:{celsius}°C\n')
+
+            elif pergunta == '2': ##DESCOBRIR F
+                temp = int(input('Temperatura: '))
+                fahrenheit = (temp*1.8)+32
+                print(f'\n{temp}°C em fahrenheit é:{fahrenheit}\n')
+
+            else:
+                print('Opção Invalida...')
+
+                ##SAIDO DO CONVERSOR##
+
+        elif opcao == '3':
+            print('deu certo 3')
+        elif opcao == '4':
+            print('Desligando a maquina.......')
+            break
+        else:
+            print('Opção Invalida... BURRO')
+
+            ##CADATRO DE UM PROGRAMADOR
+        
+elif programador == '2':
+    print('Para você poder acessar o diretorio precisa ser um programador \nVamos inicar seu cadastro....\n')
+
+    while True:
+     print('Perguntas complexas de TI :)\n')
+     per1 = input("1° O que fazer quando o Hardware não funcionar:\n 1 - Chutar\n 2 - Xingar\n 3 - Levar pro TI\n")
+
+     if per1 == '1':
+        print('Parabens proxima pergunta....\n')
+        per2 = input('2° Usuario escreva: um Hello World em Python\n')
+        if per2 == "um Hello World em Python":
+            print('\nParabens você agora é um programador......tenho pena de você :)\n')
+            break
+        else:
+            print('\nQuem sabe da proxima...\n')
+
+     elif per1 == '3':
+        print('DEIXE O TI EM PAZ... MAL VOCÊ É UM PROGRAMADOR MAL\n4')
+        break
+
+     else:
+         print('Quem sabe da proxima...')
+         break
+
+else:
+    print('Opção Invalida... BURRO')
